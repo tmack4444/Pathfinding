@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Scanner;
 
 /* @Author Tom Mackinson
  * Implementation of Breadth first search for pathfinding
@@ -16,10 +16,19 @@ import java.util.ArrayList;
  * Finding the fastest route from a list of valid routes
  */
 
-public class BFS{
-  
-    public static String[] runMaze(ArrayList<String> maze){
+public class MazeDriver{
+  // The purpose of the driver is simply to load in the target maze from memory, then run that maze with each search algorithm
+  // The driver will then output statistics from each algo, such as run time and found path distance
 
+    public static void main(String args[]){
+
+      Scanner input = new Scanner(System.in);
+
+      ArrayList maze = new ArrayList();
+      while(input.hasNext()){
+        maze.add(input.nextInt());
+      }
+      String[] results = BFS.runMaze(maze);
 
     }
 
