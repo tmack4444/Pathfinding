@@ -24,11 +24,13 @@ public class MazeDriver{
 
       Scanner input = new Scanner(System.in);
 
-      ArrayList maze = new ArrayList();
+      ArrayList<Integer> maze = new ArrayList<Integer>();
       while(input.hasNext()){
         maze.add(input.nextInt());
       }
-      String[] results = BFS.runMaze(maze);
+      for(int i = 0; i < maze.size(); i++){
+        System.out.println(maze.get(i));
+      }
 
     }
 
